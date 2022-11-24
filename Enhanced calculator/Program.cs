@@ -2,7 +2,6 @@
     {
         static void Main(string[] args)
         {
-            // Comment
             Console.WriteLine("Please enter a number");
             var num1str = Console.ReadLine();
             Console.WriteLine("Please enter another number");
