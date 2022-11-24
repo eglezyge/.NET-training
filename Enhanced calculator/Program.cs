@@ -8,8 +8,8 @@
             var num2str = Console.ReadLine();
             Console.WriteLine("Enter one of five characters for wanted operation: * / % + or - ");
             var char1 = Console.ReadLine();
-            int num1 = Int32.Parse(num1str);
-            int num2 = Int32.Parse(num2str);
+            double num1 = Double.Parse(num1str);
+            double num2 = Double.Parse(num2str);
             if (char1 == "*")
             { 
                 double resultMult = num1 * num2;
