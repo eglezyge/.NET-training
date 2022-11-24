@@ -1,0 +1,15 @@
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\bin\Debug\net6.0\Enhanced calculator.exe
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\bin\Debug\net6.0\Enhanced calculator.deps.json
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\bin\Debug\net6.0\Enhanced calculator.runtimeconfig.json
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\bin\Debug\net6.0\Enhanced calculator.dll
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\bin\Debug\net6.0\Enhanced calculator.pdb
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\Enhanced calculator.csproj.AssemblyReference.cache
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\Enhanced calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\Enhanced calculator.AssemblyInfoInputs.cache
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\Enhanced calculator.AssemblyInfo.cs
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\Enhanced calculator.csproj.CoreCompileInputs.cache
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\Enhanced calculator.dll
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\refint\Enhanced calculator.dll
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\Enhanced calculator.pdb
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\Enhanced calculator.genruntimeconfig.cache
+C:\Users\VM\Desktop\.NET-training\Enhanced calculator\obj\Debug\net6.0\ref\Enhanced calculator.dll
