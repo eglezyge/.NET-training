@@ -91,35 +91,7 @@ class Enhanced
 }
 
 
-    //        for (; ; )
-    //        {
-    //            try
-    //            {
-    //                Console.WriteLine("Enter one of five characters for wanted operation: * / % + or - ");
-    //                var char1 = Console.ReadLine();
-    //            }
-    //            }
-
-
-
-    //        bool char1 = false;
-    //        for (; char1 != "*" || "/" || "%" || "+" || "-";)
-    //        {
-    //            try
-    //            { Console.WriteLine("")}
-
-
-
-    //            }
-
-
-    //    }
-
-    //}
-
-
-
-
+  
             //Console.WriteLine("Please enter a number");
             //var num1str = Console.ReadLine();
             //Console.WriteLine("Please enter another number");
