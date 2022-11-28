@@ -43,7 +43,7 @@ class Enhanced
             if (char1 == "*")
             {
                 double resultMult = num1 * num2;
-                Console.WriteLine("You chose multiplication. The result is:" + resultMult);
+                Console.WriteLine("You chose multiplication. The result is: " + resultMult);
                 break;
             }
             else if (char1 == "/")
@@ -55,32 +55,32 @@ class Enhanced
                 else
                 {
                     double resultDiv = num1 / num2;
-                    Console.WriteLine("You chose division. The result is:" + resultDiv);
+                    Console.WriteLine("You chose division. The result is: " + resultDiv);
                     break;
                 }
             }
             else if (char1 == "%")
             {
                 double resultMod = num1 % num2;
-                Console.WriteLine("You chose modulo. The result is:" + resultMod);
+                Console.WriteLine("You chose modulo. The result is: " + resultMod);
                 break;
             }
             else if (char1 == "+")
             {
                 double resultAdd = num1 + num2;
-                Console.WriteLine("You chose addition. The result is:" + resultAdd);
+                Console.WriteLine("You chose addition. The result is: " + resultAdd);
                 break;
             }
             else if (char1 == "-")
             {
                 double resultSubtract = num1 - num2;
-                Console.WriteLine("You chose subtraction. The result is:" + resultSubtract);
+                Console.WriteLine("You chose subtraction. The result is: " + resultSubtract);
                 break;
             }
             badChar = true;
             if (zeroDivision == true)
             {
-                Console.WriteLine("Nedalink is nulio");
+                Console.WriteLine("Division by zero is not possible.");
             }
             else
             {
