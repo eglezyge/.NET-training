@@ -1,0 +1,15 @@
+C:\Users\VM\Desktop\.NET-training\Phone validation\bin\Debug\net6.0\Phone validation.exe
+C:\Users\VM\Desktop\.NET-training\Phone validation\bin\Debug\net6.0\Phone validation.deps.json
+C:\Users\VM\Desktop\.NET-training\Phone validation\bin\Debug\net6.0\Phone validation.runtimeconfig.json
+C:\Users\VM\Desktop\.NET-training\Phone validation\bin\Debug\net6.0\Phone validation.dll
+C:\Users\VM\Desktop\.NET-training\Phone validation\bin\Debug\net6.0\Phone validation.pdb
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\Phone validation.csproj.AssemblyReference.cache
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\Phone validation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\Phone validation.AssemblyInfoInputs.cache
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\Phone validation.AssemblyInfo.cs
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\Phone validation.csproj.CoreCompileInputs.cache
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\Phone validation.dll
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\refint\Phone validation.dll
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\Phone validation.pdb
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\Phone validation.genruntimeconfig.cache
+C:\Users\VM\Desktop\.NET-training\Phone validation\obj\Debug\net6.0\ref\Phone validation.dll
