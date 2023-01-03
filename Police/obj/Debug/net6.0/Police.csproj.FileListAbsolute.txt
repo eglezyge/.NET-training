@@ -1,0 +1,15 @@
+C:\Users\VM\Desktop\.NET-training\Police\bin\Debug\net6.0\Police.exe
+C:\Users\VM\Desktop\.NET-training\Police\bin\Debug\net6.0\Police.deps.json
+C:\Users\VM\Desktop\.NET-training\Police\bin\Debug\net6.0\Police.runtimeconfig.json
+C:\Users\VM\Desktop\.NET-training\Police\bin\Debug\net6.0\Police.dll
+C:\Users\VM\Desktop\.NET-training\Police\bin\Debug\net6.0\Police.pdb
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\Police.csproj.AssemblyReference.cache
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\Police.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\Police.AssemblyInfoInputs.cache
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\Police.AssemblyInfo.cs
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\Police.csproj.CoreCompileInputs.cache
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\Police.dll
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\refint\Police.dll
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\Police.pdb
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\Police.genruntimeconfig.cache
+C:\Users\VM\Desktop\.NET-training\Police\obj\Debug\net6.0\ref\Police.dll

@@ -23,9 +23,10 @@ namespace MySuperBank
             } 
         }
 
-        public BankAccount(string Owner)
+        public BankAccount(string Owner, decimal initialBalance)
         {
             this.Owner = Owner;
+            MakeDeposit(initialBalance, DateTime.Now, "Initial Balance");
             this.Number = accountNumberSeed.ToString();
             accountNumberSeed++;
         }
@@ -54,5 +55,15 @@ namespace MySuperBank
             allTransactions.Add(withdrawal);
         }
 
+        public string GetAccountHistory()
+        {
+            var report = new StringBuilder();
+            report.AppendLine("Date\t\tAmount\tNote");
+            foreach (var item in allTransactions)
+            {
+                report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{item.Notes}");
+            }
+            return report.ToString();
+        }
     }
 }
