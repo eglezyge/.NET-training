@@ -1,0 +1,15 @@
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\bin\Debug\net6.0\BattleShipFromWeb.exe
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\bin\Debug\net6.0\BattleShipFromWeb.deps.json
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\bin\Debug\net6.0\BattleShipFromWeb.runtimeconfig.json
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\bin\Debug\net6.0\BattleShipFromWeb.dll
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\bin\Debug\net6.0\BattleShipFromWeb.pdb
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\BattleShipFromWeb.csproj.AssemblyReference.cache
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\BattleShipFromWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\BattleShipFromWeb.AssemblyInfoInputs.cache
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\BattleShipFromWeb.AssemblyInfo.cs
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\BattleShipFromWeb.csproj.CoreCompileInputs.cache
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\BattleShipFromWeb.dll
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\refint\BattleShipFromWeb.dll
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\BattleShipFromWeb.pdb
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\BattleShipFromWeb.genruntimeconfig.cache
+C:\Users\VM\Desktop\.NET-training\BattleShipFromWeb\obj\Debug\net6.0\ref\BattleShipFromWeb.dll

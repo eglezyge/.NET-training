@@ -14,6 +14,10 @@ namespace Police
         private string OfficerDistrict { get; set; }
         private int OfficerCrimesSolved { get; set; }
 
+        public Officer() 
+        {
+        }
+
         public Officer(string name, string surname, int id, string district, int crimesSolved)
         {
             OfficerName = name;
@@ -25,11 +29,9 @@ namespace Police
 
         public string OfficerDetails()
         {
-            return String.Format("|{0,-20|{1,-20}|{2,-10}|{3,-20}|{4,-10}|", OfficerName, OfficerSurname, OfficerID, OfficerDistrict, OfficerCrimesSolved);
-            //return OfficerName + "\t\t" + OfficerSurname + "\t\t\t" + OfficerID + "\t\t" + OfficerDistrict + "\t\t" + OfficerCrimesSolved;
+            //return String.Format("|{0,-20|{1,-20}|{2,-10}|{3,-20}|{4,-10}|", OfficerName, OfficerSurname, OfficerID, OfficerDistrict, OfficerCrimesSolved);
+            return OfficerName + "\t\t" + OfficerSurname + "\t\t\t" + OfficerID + "\t\t" + OfficerDistrict + "\t\t" + OfficerCrimesSolved;
         }
-
-        public Officer() { }
 
         public int CalculatedLevel()
         {

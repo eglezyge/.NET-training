@@ -1,0 +1,15 @@
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\bin\Debug\net6.0\Officers Criminals Game.exe
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\bin\Debug\net6.0\Officers Criminals Game.deps.json
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\bin\Debug\net6.0\Officers Criminals Game.runtimeconfig.json
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\bin\Debug\net6.0\Officers Criminals Game.dll
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\bin\Debug\net6.0\Officers Criminals Game.pdb
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\Officers Criminals Game.csproj.AssemblyReference.cache
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\Officers Criminals Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\Officers Criminals Game.AssemblyInfoInputs.cache
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\Officers Criminals Game.AssemblyInfo.cs
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\Officers Criminals Game.csproj.CoreCompileInputs.cache
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\Officers Criminals Game.dll
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\refint\Officers Criminals Game.dll
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\Officers Criminals Game.pdb
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\Officers Criminals Game.genruntimeconfig.cache
+C:\Users\VM\Desktop\.NET-training\Officers Criminals Game\obj\Debug\net6.0\ref\Officers Criminals Game.dll

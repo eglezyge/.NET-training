@@ -6,24 +6,30 @@ using System.Threading.Tasks;
 
 namespace Officer_task_2
 {
-    public class Officer
+    public class Officer : Person
     {
-        private string OfficerName { get; set; }
-        private string OfficerSurname { get; set; }
+        //private string OfficerName { get; set; }
+        //private string OfficerSurname { get; set; }
         private int OfficerID { get; set; }
         private int OfficerCrimesSolved { get; set; }
 
-        public Officer(string name, string surname, int id, string district, int crimesSolved)
+        public Officer(string name, string surname, int id, int crimesSolved):base(name, surname)
         {
-            OfficerName = name;
-            OfficerSurname = surname;
+            //OfficerName = name;
+            //OfficerSurname = surname;
             OfficerID = id;
             OfficerCrimesSolved = crimesSolved;
         }
 
-        public string OfficerDetails()
+        //public string OfficerDetails()
+        //{
+        //    return OfficerName + "\t\t" + OfficerSurname + "\t\t\t" + OfficerID + "\t\t" + OfficerCrimesSolved;
+        //}
+
+        public override string ToString()
         {
-            return OfficerName + "\t\t" + OfficerSurname + "\t\t\t" + OfficerID + "\t\t" + OfficerCrimesSolved;
+            string details = "Officer ID: " + OfficerID + " ; " + "Crimes solved: " + OfficerCrimesSolved + "\n";
+            return base.ToString() + details;
         }
 
         public Officer() { }
@@ -44,35 +50,35 @@ namespace Officer_task_2
             }
         }
 
-        public static int Level1Amount(Officer[] array)
-        {
-            int level1 = 0;
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i].CalculatedLevel() == 1)
-                {
-                    level1++;
-                }
-            }
-            return level1;
-        }
+        //public static int Level1Amount(Officer[] array)
+        //{
+        //    int level1 = 0;
+        //    for (int i = 0; i < array.Length; i++)
+        //    {
+        //        if (array[i].CalculatedLevel() == 1)
+        //        {
+        //            level1++;
+        //        }
+        //    }
+        //    return level1;
+        //}
 
-        public static void FindName(Officer[] array, string name)
-        {
-            bool nameNotFound = true;
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i].OfficerName == name)
-                {
-                    Console.WriteLine("There is an officer named " + name);
-                    nameNotFound = false;
-                    break;
-                }
-            }
-            if (nameNotFound)
-            {
-                Console.WriteLine("There is no officer named " + name);
-            }
-        }
+        //public static void FindName(Officer[] array, string name)
+        //{
+        //    bool nameNotFound = true;
+        //    for (int i = 0; i < array.Length; i++)
+        //    {
+        //        if (array[i].OfficerName == name)
+        //        {
+        //            Console.WriteLine("There is an officer named " + name);
+        //            nameNotFound = false;
+        //            break;
+        //        }
+        //    }
+        //    if (nameNotFound)
+        //    {
+        //        Console.WriteLine("There is no officer named " + name);
+        //    }
+        //}
     }
 }
