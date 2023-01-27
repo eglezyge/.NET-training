@@ -21,6 +21,7 @@ namespace Officers_Criminals_Game
                 try
                 {
                     Console.WriteLine("Type a number where do you want to place " + item.Name + " ?");
+                    //Need to do invisible input.
                     int square = int.Parse(Console.ReadLine());
                     if (HiddenBoard[square - 1] == "x")
                     {
@@ -40,6 +41,6 @@ namespace Officers_Criminals_Game
             }
             return HiddenBoard;
         }
- 
+
     }
 }
