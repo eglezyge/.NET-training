@@ -20,7 +20,7 @@ namespace Officers_Criminals_Game
             PlacePlayer:
                 try
                 {
-                    Console.WriteLine("Type a number where do you want to place " + item.Name + " ?");
+                    Console.WriteLine("Type a number where do you want to place " + item.Name + "?");
                     //Need to do invisible input.
                     int square = int.Parse(Console.ReadLine());
                     if (HiddenBoard[square - 1] == "x")
