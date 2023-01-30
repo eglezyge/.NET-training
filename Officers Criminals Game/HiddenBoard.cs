@@ -17,25 +17,29 @@ namespace Officers_Criminals_Game
             }
             foreach (var item in team)
             {
+                Console.Write("Type a number where do you want to place " + item.Name + ": ");
+
             PlacePlayer:
                 try
                 {
-                    Console.WriteLine("Type a number where do you want to place " + item.Name + "?");
-                    //Need to do invisible input.
+                    Console.ForegroundColor = ConsoleColor.Black;
                     int square = int.Parse(Console.ReadLine());
+                    Console.ForegroundColor = ConsoleColor.White;
                     if (HiddenBoard[square - 1] == "x")
                     {
                         HiddenBoard[square - 1] = item.Name;
                     }
                     else
                     {
-                        Console.WriteLine("This square is taken. Try again.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("This square is taken. Try again: ");
                         goto PlacePlayer;
                     }
                 }
                 catch
                 {
-                    Console.WriteLine("There is no such square. Try again.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("There is no such square. Try again: ");
                     goto PlacePlayer;
                 }
             }
