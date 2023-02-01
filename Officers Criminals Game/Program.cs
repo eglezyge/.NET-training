@@ -9,11 +9,11 @@ namespace Officers_Criminals_Game
             Console.WriteLine("Welcome to the Officers Criminals Game! \nBe the first to shoot all 5 of your opponent’s players!");
             Console.WriteLine();
 
-            Console.Write("Who will play the Officers? Type the name: ");
+            Console.Write("Officers start first. Who will play as Officers? Type the name: ");
             string player1Name = Console.ReadLine();
             Console.WriteLine();
 
-            Console.Write("Who will play the Criminals? Type the name: ");
+            Console.Write("Who will play as Criminals? Type the name: ");
             string player2Name = Console.ReadLine();
             Console.WriteLine();
             Console.Clear();
@@ -23,14 +23,14 @@ namespace Officers_Criminals_Game
             var officers = Person.CreateOfficerTeam(randomPlayers);
             var criminals = Person.CreateCriminalTeam(randomPlayers);
 
-            Console.WriteLine($"{player1Name}, this is your team of Officers: ");
+            Console.WriteLine($"{player1Name}, this will be your team of Officers:\n");
             foreach (var item in officers)
             {
                 Console.WriteLine("- " + item.Name);
             }
             Console.WriteLine();
 
-            Console.WriteLine($"{player2Name}, this is your team of Criminals: ");
+            Console.WriteLine($"{player2Name}, this will be your team of Criminals:\n");
             foreach (var item in criminals)
             {
                 Console.WriteLine("- " + item.Name);
@@ -40,7 +40,7 @@ namespace Officers_Criminals_Game
             Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine($"{player1Name}, this is your board: ");
+            Console.WriteLine($"{player1Name}, this is your board:\n");
             string[] officersBoard = PublicBoard.CreatePublicBoard();
             PublicBoard.PrintPublicBoard(officersBoard);
             Console.WriteLine("\n");
@@ -49,7 +49,7 @@ namespace Officers_Criminals_Game
             var officersHiddenBoard = HiddenBoard.MakeHiddenBoard(officers);
             Console.Clear();
 
-            Console.WriteLine($"{player2Name}, this is your board: ");
+            Console.WriteLine($"{player2Name}, this is your board:\n");
             string[] criminalsBoard = PublicBoard.CreatePublicBoard();
             PublicBoard.PrintPublicBoard(criminalsBoard);
             Console.WriteLine("\n");
@@ -57,92 +57,174 @@ namespace Officers_Criminals_Game
             //Player 2 places his players on the board:
             var criminalsHiddenBoard = HiddenBoard.MakeHiddenBoard(criminals);
             Console.Clear();
-
+            //////////////////////////////// All good until here.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
             int counterOfficers = 0;
             int counterCriminals = 0;
 
         TakeShotOfficers:
-            //Draw criminals public board with shots taken:
-            PublicBoard.PrintPublicBoard(criminalsBoard);
-            Console.Write($"\n{player1Name}, type a number where do you want to shoot: ");
-            int shotOfficers = int.Parse(Console.ReadLine());
             Console.Clear();
+            Console.WriteLine($"{player1Name}, where do you want to shoot?\n");
+            PublicBoard.PrintPublicBoard(criminalsBoard);
+            Console.WriteLine();
+            Console.Write("\nType a square number: ");
 
-            if (criminalsHiddenBoard[shotOfficers - 1] == "x")
+            bool tryAgain = true;
+            while(tryAgain)
             {
-                Console.WriteLine("Sorry, you missed!");
-                
-                //Add "-" for missed shot in the public board:
-                criminalsBoard[shotOfficers - 1] = "-"; //PROBLEM: re-writes + into - in public board. Need to make that + cannot be changed into -.
-                //Draw public board with shots taken:
-                PublicBoard.PrintPublicBoard(criminalsBoard);
-                Console.WriteLine("\n");
-                Console.Write("Press ENTER to continue. ");
-                Console.ReadLine();
-                Console.Clear();
-
-                goto TakeShotCriminals;
-            }
-            else
-            {
-                Console.WriteLine("You shot " + criminalsHiddenBoard[shotOfficers - 1]);
-                criminalsHiddenBoard[shotOfficers - 1] = "x";
-                //Add "+" for good shot in the public board:
-                criminalsBoard[shotOfficers - 1] = "+";
-                PublicBoard.PrintPublicBoard(criminalsBoard);
-                //Add counter and check if won:
-                counterOfficers++;
-                if (counterOfficers == 5)
+                try
                 {
-                    Console.WriteLine($"\nCongratultions {player1Name}, you shot all Criminals! You win!");
-                    goto TheEnd;
+                    int shotOfficers = int.Parse(Console.ReadLine());
+                    if (criminalsHiddenBoard[shotOfficers - 1] == "x")
+                    {
+                        Console.Clear();
+                        Console.WriteLine($"Sorry {player1Name}, you missed!");
+                        Console.WriteLine();
+                        criminalsBoard[shotOfficers - 1] = " -";
+                        PublicBoard.PrintPublicBoard(criminalsBoard);
+                        Console.WriteLine();
+                        Console.Write("\nPress ENTER to continue. ");
+                        Console.ReadLine();
+
+                        goto TakeShotCriminals;
+                    }
+
+                    else if (criminalsHiddenBoard[shotOfficers - 1] == "y")
+                    {
+                        Console.Write("You can't shoot here. Try again: ");
+                        tryAgain = true;
+                        
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine($"{player1Name}, you shot Criminal " + criminalsHiddenBoard[shotOfficers - 1] + "!\n");
+                        criminalsHiddenBoard[shotOfficers - 1] = "y";
+                        criminalsBoard[shotOfficers - 1] = " X";
+                        PublicBoard.PrintPublicBoard(criminalsBoard);
+                        counterOfficers++;
+                        if (counterOfficers == 5)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine($"\nCongratultions, {player1Name}, you shot all Criminals! You win!");
+                            goto TheEnd;
+                        }
+                        Console.WriteLine();
+                        Console.Write("\nShoot again: ");
+                        tryAgain = true;
+                        
+                    }
                 }
-                Console.Clear();
-                goto TakeShotOfficers;
+                catch
+                {
+                    Console.Write("There is no such square. Try again: ");
+                    tryAgain = true;
+                    
+                }
             }
 
         TakeShotCriminals:
-            //Draw officers public board with shots taken:
-            PublicBoard.PrintPublicBoard(officersBoard);
-            Console.Write($"\n{player2Name}, type a number where do you want to shoot!");
-            int shotCriminals = int.Parse(Console.ReadLine());
             Console.Clear();
+            Console.WriteLine($"{player2Name}, where do you want to shoot?\n");
+            PublicBoard.PrintPublicBoard(officersBoard);
+            Console.WriteLine();
+            Console.Write("\nType a square number: ");
 
-            if (officersHiddenBoard[shotCriminals - 1] == "x")
+            bool tryAgainCrim = true;
+            while (tryAgainCrim)
             {
-                Console.WriteLine("Sorry, you missed!");
-                Console.WriteLine("\n");
-                //Add "-" for missed shot in the public board:
-                officersBoard[shotCriminals - 1] = "-"; //PROBLEM: re-writes + into - in public board. Need to make that + cannot be changed into -.
-                //Draw public board with shots taken:
-                PublicBoard.PrintPublicBoard(officersBoard);
-                Console.Write("Press ENTER to continue. ");
-                Console.ReadLine();
-                Console.Clear();
-
-                goto TakeShotOfficers;
-            }
-            else
-            {
-                Console.WriteLine("You shot " + officersHiddenBoard[shotCriminals - 1]);
-                officersHiddenBoard[shotCriminals - 1] = "x";
-                //Add "+" for good shot in the public board:
-                officersBoard[shotCriminals - 1] = "+";
-                PublicBoard.PrintPublicBoard(officersBoard);
-                //Add counter and check if won:
-                counterCriminals++;
-                if (counterCriminals == 5)
+                try
                 {
-                    Console.WriteLine($"\nCongratultions {player2Name}, you shot all Officers! You win!");
-                    goto TheEnd;
+                    int shotCriminals = int.Parse(Console.ReadLine());
+                    if (officersHiddenBoard[shotCriminals - 1] == "x")
+                    {
+                        Console.Clear();
+                        Console.WriteLine($"Sorry {player2Name}, you missed!");
+                        Console.WriteLine();
+                        officersBoard[shotCriminals - 1] = " -";
+                        PublicBoard.PrintPublicBoard(officersBoard);
+                        Console.WriteLine();
+                        Console.Write("\nPress ENTER to continue. ");
+                        Console.ReadLine();
+
+                        goto TakeShotOfficers;
+                    }
+
+                    else if (officersHiddenBoard[shotCriminals - 1] == "y")
+                    {
+                        Console.Write("You can't shoot here. Try again:  ");
+                        tryAgainCrim = true;
+
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine($"{player2Name}, you shot Officer " + officersHiddenBoard[shotCriminals - 1] + "!\n");
+                        officersHiddenBoard[shotCriminals - 1] = "y";
+                        officersBoard[shotCriminals - 1] = " X";
+                        PublicBoard.PrintPublicBoard(officersBoard);
+                        counterCriminals++;
+                        if (counterCriminals == 5)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine($"\nCongratultions, {player2Name}, you shot all Officers! You win!");
+                            goto TheEnd;
+                        }
+                        Console.WriteLine();
+                        Console.Write("\nShoot again: ");
+                        tryAgainCrim = true;
+
+                    }
                 }
-                Console.Clear();
-                goto TakeShotCriminals;
+                catch
+                {
+                    Console.Write("There is no such square. Try again: ");
+                    tryAgainCrim = true;
+
+                }
             }
+
+
+        //TakeShotCriminals:
+        //    //Draw officers public board with shots taken:
+        //    PublicBoard.PrintPublicBoard(officersBoard);
+        //    Console.Write($"\n{player2Name}, type a number where do you want to shoot!");
+        //    int shotCriminals = int.Parse(Console.ReadLine());
+
+        //    if (officersHiddenBoard[shotCriminals - 1] == "x")
+        //    {
+        //        Console.WriteLine("Sorry, you missed!");
+        //        Console.WriteLine("\n");
+        //        //Add "-" for missed shot in the public board:
+        //        officersBoard[shotCriminals - 1] = "-"; //PROBLEM: re-writes + into - in public board. Need to make that + cannot be changed into -.
+        //        //Draw public board with shots taken:
+        //        PublicBoard.PrintPublicBoard(officersBoard);
+        //        Console.Write("Press ENTER to continue. ");
+        //        Console.ReadLine();
+
+
+        //        goto TakeShotOfficers;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("You shot Officer " + officersHiddenBoard[shotCriminals - 1]);
+        //        officersHiddenBoard[shotCriminals - 1] = "x";
+        //        //Add "+" for good shot in the public board:
+        //        officersBoard[shotCriminals - 1] = "+";
+        //        PublicBoard.PrintPublicBoard(officersBoard);
+        //        //Add counter and check if won:
+        //        counterCriminals++;
+        //        if (counterCriminals == 5)
+        //        {
+        //            Console.WriteLine($"\nCongratultions {player2Name}, you shot all Officers! You win!");
+        //            goto TheEnd;
+        //        }
+
+        //        goto TakeShotCriminals;
+        //    }
 
         TheEnd:
-            Console.Clear();
+
             Console.WriteLine("\nThank you for the game!");
         }
     }

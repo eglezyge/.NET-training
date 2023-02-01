@@ -12,15 +12,15 @@ namespace Officers_Criminals_Game
         public static string[] CreatePublicBoard()
         {
             string[] board = new string[16];
-            board[0] = "1";
-            board[1] = "2";
-            board[2] = "3";
-            board[3] = "4";
-            board[4] = "5";
-            board[5] = "6";
-            board[6] = "7";
-            board[7] = "8";
-            board[8] = "9";
+            board[0] = " 1";
+            board[1] = " 2";
+            board[2] = " 3";
+            board[3] = " 4";
+            board[4] = " 5";
+            board[5] = " 6";
+            board[6] = " 7";
+            board[7] = " 8";
+            board[8] = " 9";
             board[9] = "10";
             board[10] = "11";
             board[11] = "12";
@@ -33,14 +33,41 @@ namespace Officers_Criminals_Game
 
         public static void PrintPublicBoard(string[] board)
         {
-            for (int i = 0; i < 16; i++)
-            {
-                Console.Write(board[i] + "  ");
-                if (i == 3 || i == 7 || i == 11)
-                {
-                    Console.WriteLine();
-                }
-            }
+            //for (int i = 0; i < 16; i++)
+            //{
+            //    Console.Write(board[i] + "  ");
+            //    if (i == 3 || i == 7 || i == 11)
+            //    {
+            //        Console.WriteLine();
+            //    }
+            //}
+            //Console.WriteLine("_________________________");
+            //Console.WriteLine("|     |     |     |     |");
+            //Console.WriteLine("|  " + board[0] + "  |" + "  " + board[1] + "  |" + "  " + board[2] + "  |" + "  " + board[3] + "  |");
+            //Console.WriteLine("|_____|_____|_____|_____|");
+            //Console.WriteLine("|     |     |     |     |");
+            //Console.WriteLine("|  " + board[4] + "  |" + "  " + board[5] + "  |" + "  " + board[6] + "  |" + "  " + board[7] + "  |");
+            //Console.WriteLine("|_____|_____|_____|_____|");
+            //Console.WriteLine("|     |     |     |     |");
+            //Console.WriteLine("|  " + board[8] + "  |" + " " + board[9] + "  |" + " " + board[10] + "  |" + " " + board[11] + "  |");
+            //Console.WriteLine("|_____|_____|_____|_____|");
+            //Console.WriteLine("|     |     |     |     |");
+            //Console.WriteLine("| " + board[12] + "  |" + " " + board[13] + "  |" + " " + board[14] + "  |" + " " + board[15] + "  |");
+            //Console.WriteLine("|_____|_____|_____|_____|");
+
+            Console.WriteLine("_________________________");
+            Console.WriteLine("|     |     |     |     |");
+            Console.WriteLine("| " + board[0] + "  |" + " " + board[1] + "  |" + " " + board[2] + "  |" + " " + board[3] + "  |");
+            Console.WriteLine("|_____|_____|_____|_____|");
+            Console.WriteLine("|     |     |     |     |");
+            Console.WriteLine("| " + board[4] + "  |" + " " + board[5] + "  |" + " " + board[6] + "  |" + " " + board[7] + "  |");
+            Console.WriteLine("|_____|_____|_____|_____|");
+            Console.WriteLine("|     |     |     |     |");
+            Console.WriteLine("| " + board[8] + "  |" + " " + board[9] + "  |" + " " + board[10] + "  |" + " " + board[11] + "  |");
+            Console.WriteLine("|_____|_____|_____|_____|");
+            Console.WriteLine("|     |     |     |     |");
+            Console.WriteLine("| " + board[12] + "  |" + " " + board[13] + "  |" + " " + board[14] + "  |" + " " + board[15] + "  |");
+            Console.WriteLine("|_____|_____|_____|_____|");
         }
 
        

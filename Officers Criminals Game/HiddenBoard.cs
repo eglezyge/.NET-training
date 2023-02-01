@@ -23,6 +23,7 @@ namespace Officers_Criminals_Game
                 try
                 {
                     Console.ForegroundColor = ConsoleColor.Black;
+                    Console.CursorVisible = false;
                     int square = int.Parse(Console.ReadLine());
                     Console.ForegroundColor = ConsoleColor.White;
                     if (HiddenBoard[square - 1] == "x")
