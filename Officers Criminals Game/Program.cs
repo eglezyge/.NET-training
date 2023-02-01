@@ -6,14 +6,18 @@ namespace Officers_Criminals_Game
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Officers Criminals Game! \nBe the first to shoot all 5 of your opponent’s players!");
+            Console.WriteLine("         \x1b[93m---------------------------------------------\u001b[0m");
+            Console.WriteLine("         \x1b[93m||\x1B[0m \x1b[96mWelcome to OFFICERS VS. CRIMINALS game!\x1B[0m \x1b[93m||\x1B[0m");
+            Console.WriteLine("         \x1b[93m---------------------------------------------\u001b[0m");
+            Console.WriteLine();
+            Console.WriteLine("\x1b[91m>>>\x1B[0m \x1b[93mBe the first to shoot all 5 of your opponent’s players!\x1B[0m \u001b[91m<<<\u001b[0m");
             Console.WriteLine();
 
-            Console.Write("Officers start first. Who will play as Officers? Type the name: ");
+            Console.Write("Officers start first. Who will play as \u001b[96mOfficers\x1B[0m? Type the name: ");
             string player1Name = Console.ReadLine();
             Console.WriteLine();
 
-            Console.Write("Who will play as Criminals? Type the name: ");
+            Console.Write("Who will play as \u001b[93mCriminals\x1B[0m? Type the name: ");
             string player2Name = Console.ReadLine();
             Console.WriteLine();
             Console.Clear();
@@ -26,14 +30,14 @@ namespace Officers_Criminals_Game
             Console.WriteLine($"{player1Name}, this will be your team of Officers:\n");
             foreach (var item in officers)
             {
-                Console.WriteLine("- " + item.Name);
+                Console.WriteLine("\x1b[96m - " + item.Name + "\x1B[0m");
             }
             Console.WriteLine();
 
             Console.WriteLine($"{player2Name}, this will be your team of Criminals:\n");
             foreach (var item in criminals)
             {
-                Console.WriteLine("- " + item.Name);
+                Console.WriteLine("\x1b[93m - " + item.Name + "\x1B[0m");
             }
             Console.WriteLine();
             Console.Write("Press ENTER to continue.");
@@ -57,7 +61,6 @@ namespace Officers_Criminals_Game
             //Player 2 places his players on the board:
             var criminalsHiddenBoard = HiddenBoard.MakeHiddenBoard(criminals);
             Console.Clear();
-            //////////////////////////////// All good until here.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
             int counterOfficers = 0;
             int counterCriminals = 0;
@@ -78,9 +81,9 @@ namespace Officers_Criminals_Game
                     if (criminalsHiddenBoard[shotOfficers - 1] == "x")
                     {
                         Console.Clear();
-                        Console.WriteLine($"Sorry {player1Name}, you missed!");
+                        Console.WriteLine($"\x1B[31mSorry {player1Name}, you missed!\x1B[0m"); // red text
                         Console.WriteLine();
-                        criminalsBoard[shotOfficers - 1] = " -";
+                        criminalsBoard[shotOfficers - 1] = "\x1B[31m -\x1B[0m"; // red text
                         PublicBoard.PrintPublicBoard(criminalsBoard);
                         Console.WriteLine();
                         Console.Write("\nPress ENTER to continue. ");
@@ -100,13 +103,13 @@ namespace Officers_Criminals_Game
                         Console.Clear();
                         Console.WriteLine($"{player1Name}, you shot Criminal " + criminalsHiddenBoard[shotOfficers - 1] + "!\n");
                         criminalsHiddenBoard[shotOfficers - 1] = "y";
-                        criminalsBoard[shotOfficers - 1] = " X";
+                        criminalsBoard[shotOfficers - 1] = "\x1B[32m X\x1B[0m"; // green text
                         PublicBoard.PrintPublicBoard(criminalsBoard);
                         counterOfficers++;
                         if (counterOfficers == 5)
                         {
                             Console.WriteLine();
-                            Console.WriteLine($"\nCongratultions, {player1Name}, you shot all Criminals! You win!");
+                            Console.WriteLine($"\u001b[91m>>>\u001b[0m \u001b[93mCongratultions {player1Name}, you shot all Criminals! You win!\u001b[0m \u001b[91m<<<\u001b[0m");
                             goto TheEnd;
                         }
                         Console.WriteLine();
@@ -139,9 +142,9 @@ namespace Officers_Criminals_Game
                     if (officersHiddenBoard[shotCriminals - 1] == "x")
                     {
                         Console.Clear();
-                        Console.WriteLine($"Sorry {player2Name}, you missed!");
+                        Console.WriteLine($"\u001b[31mSorry {player2Name}, you missed!\u001b[0m");
                         Console.WriteLine();
-                        officersBoard[shotCriminals - 1] = " -";
+                        officersBoard[shotCriminals - 1] = "\u001b[31m -\u001b[0m";
                         PublicBoard.PrintPublicBoard(officersBoard);
                         Console.WriteLine();
                         Console.Write("\nPress ENTER to continue. ");
@@ -161,13 +164,13 @@ namespace Officers_Criminals_Game
                         Console.Clear();
                         Console.WriteLine($"{player2Name}, you shot Officer " + officersHiddenBoard[shotCriminals - 1] + "!\n");
                         officersHiddenBoard[shotCriminals - 1] = "y";
-                        officersBoard[shotCriminals - 1] = " X";
+                        officersBoard[shotCriminals - 1] = "\u001b[32m X\u001b[0m";
                         PublicBoard.PrintPublicBoard(officersBoard);
                         counterCriminals++;
                         if (counterCriminals == 5)
                         {
                             Console.WriteLine();
-                            Console.WriteLine($"\nCongratultions, {player2Name}, you shot all Officers! You win!");
+                            Console.WriteLine($"\u001b[91m>>>\u001b[0m \u001b[93mCongratultions {player2Name}, you shot all Officers! You win!\u001b[0m \u001b[91m<<<\u001b[0m");
                             goto TheEnd;
                         }
                         Console.WriteLine();
@@ -184,48 +187,9 @@ namespace Officers_Criminals_Game
                 }
             }
 
-
-        //TakeShotCriminals:
-        //    //Draw officers public board with shots taken:
-        //    PublicBoard.PrintPublicBoard(officersBoard);
-        //    Console.Write($"\n{player2Name}, type a number where do you want to shoot!");
-        //    int shotCriminals = int.Parse(Console.ReadLine());
-
-        //    if (officersHiddenBoard[shotCriminals - 1] == "x")
-        //    {
-        //        Console.WriteLine("Sorry, you missed!");
-        //        Console.WriteLine("\n");
-        //        //Add "-" for missed shot in the public board:
-        //        officersBoard[shotCriminals - 1] = "-"; //PROBLEM: re-writes + into - in public board. Need to make that + cannot be changed into -.
-        //        //Draw public board with shots taken:
-        //        PublicBoard.PrintPublicBoard(officersBoard);
-        //        Console.Write("Press ENTER to continue. ");
-        //        Console.ReadLine();
-
-
-        //        goto TakeShotOfficers;
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("You shot Officer " + officersHiddenBoard[shotCriminals - 1]);
-        //        officersHiddenBoard[shotCriminals - 1] = "x";
-        //        //Add "+" for good shot in the public board:
-        //        officersBoard[shotCriminals - 1] = "+";
-        //        PublicBoard.PrintPublicBoard(officersBoard);
-        //        //Add counter and check if won:
-        //        counterCriminals++;
-        //        if (counterCriminals == 5)
-        //        {
-        //            Console.WriteLine($"\nCongratultions {player2Name}, you shot all Officers! You win!");
-        //            goto TheEnd;
-        //        }
-
-        //        goto TakeShotCriminals;
-        //    }
-
         TheEnd:
 
-            Console.WriteLine("\nThank you for the game!");
+            Console.WriteLine("\n\u001b[91m>>>\u001b[0m \x1b[96mTHANK YOU FOR THE GAME!\u001b[0m \u001b[91m<<<\u001b[0m");
         }
     }
 }
