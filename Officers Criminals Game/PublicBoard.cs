@@ -33,28 +33,7 @@ namespace Officers_Criminals_Game
 
         public static void PrintPublicBoard(string[] board)
         {
-            //for (int i = 0; i < 16; i++)
-            //{
-            //    Console.Write(board[i] + "  ");
-            //    if (i == 3 || i == 7 || i == 11)
-            //    {
-            //        Console.WriteLine();
-            //    }
-            //}
-            //Console.WriteLine("_________________________");
-            //Console.WriteLine("|     |     |     |     |");
-            //Console.WriteLine("|  " + board[0] + "  |" + "  " + board[1] + "  |" + "  " + board[2] + "  |" + "  " + board[3] + "  |");
-            //Console.WriteLine("|_____|_____|_____|_____|");
-            //Console.WriteLine("|     |     |     |     |");
-            //Console.WriteLine("|  " + board[4] + "  |" + "  " + board[5] + "  |" + "  " + board[6] + "  |" + "  " + board[7] + "  |");
-            //Console.WriteLine("|_____|_____|_____|_____|");
-            //Console.WriteLine("|     |     |     |     |");
-            //Console.WriteLine("|  " + board[8] + "  |" + " " + board[9] + "  |" + " " + board[10] + "  |" + " " + board[11] + "  |");
-            //Console.WriteLine("|_____|_____|_____|_____|");
-            //Console.WriteLine("|     |     |     |     |");
-            //Console.WriteLine("| " + board[12] + "  |" + " " + board[13] + "  |" + " " + board[14] + "  |" + " " + board[15] + "  |");
-            //Console.WriteLine("|_____|_____|_____|_____|");
-
+ 
             Console.WriteLine("_________________________");
             Console.WriteLine("|     |     |     |     |");
             Console.WriteLine("| " + board[0] + "  |" + " " + board[1] + "  |" + " " + board[2] + "  |" + " " + board[3] + "  |");

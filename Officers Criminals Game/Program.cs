@@ -109,7 +109,7 @@ namespace Officers_Criminals_Game
                         if (counterOfficers == 5)
                         {
                             Console.WriteLine();
-                            Console.WriteLine($"\u001b[91m>>>\u001b[0m \u001b[93mCongratultions {player1Name}, you shot all Criminals! You win!\u001b[0m \u001b[91m<<<\u001b[0m");
+                            Console.WriteLine($"\u001b[91m>>>\u001b[0m \u001b[93mCongratulations {player1Name}, you shot all Criminals! You win!\u001b[0m \u001b[91m<<<\u001b[0m");
                             goto TheEnd;
                         }
                         Console.WriteLine();
@@ -170,7 +170,7 @@ namespace Officers_Criminals_Game
                         if (counterCriminals == 5)
                         {
                             Console.WriteLine();
-                            Console.WriteLine($"\u001b[91m>>>\u001b[0m \u001b[93mCongratultions {player2Name}, you shot all Officers! You win!\u001b[0m \u001b[91m<<<\u001b[0m");
+                            Console.WriteLine($"\u001b[91m>>>\u001b[0m \u001b[93mCongratulations {player2Name}, you shot all Officers! You win!\u001b[0m \u001b[91m<<<\u001b[0m");
                             goto TheEnd;
                         }
                         Console.WriteLine();
