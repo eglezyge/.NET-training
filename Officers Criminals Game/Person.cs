@@ -9,8 +9,7 @@ namespace Officers_Criminals_Game
     public class Person
     {
         public string Name { get; set; }
-        //public List<Person> officerTeam;
-        //public List<Person> criminalTeam;
+ 
         public Person(string name)
         {
             this.Name = name;

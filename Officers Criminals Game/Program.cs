@@ -49,7 +49,7 @@ namespace Officers_Criminals_Game
             PublicBoard.PrintPublicBoard(officersBoard);
             Console.WriteLine("\n");
 
-            //Player 1 places his players on the board:
+            //Player 1 places his players on the hidden board:
             var officersHiddenBoard = HiddenBoard.MakeHiddenBoard(officers);
             Console.Clear();
 
@@ -58,7 +58,7 @@ namespace Officers_Criminals_Game
             PublicBoard.PrintPublicBoard(criminalsBoard);
             Console.WriteLine("\n");
 
-            //Player 2 places his players on the board:
+            //Player 2 places his players on the hidden board:
             var criminalsHiddenBoard = HiddenBoard.MakeHiddenBoard(criminals);
             Console.Clear();
 
@@ -81,29 +81,26 @@ namespace Officers_Criminals_Game
                     if (criminalsHiddenBoard[shotOfficers - 1] == "x")
                     {
                         Console.Clear();
-                        Console.WriteLine($"\x1B[31mSorry {player1Name}, you missed!\x1B[0m"); // red text
+                        Console.WriteLine($"\x1B[31mSorry {player1Name}, you missed!\x1B[0m");
                         Console.WriteLine();
-                        criminalsBoard[shotOfficers - 1] = "\x1B[31m -\x1B[0m"; // red text
+                        criminalsBoard[shotOfficers - 1] = "\x1B[31m -\x1B[0m";
                         PublicBoard.PrintPublicBoard(criminalsBoard);
                         Console.WriteLine();
                         Console.Write("\nPress ENTER to continue. ");
                         Console.ReadLine();
-
                         goto TakeShotCriminals;
                     }
-
                     else if (criminalsHiddenBoard[shotOfficers - 1] == "y")
                     {
                         Console.Write("You can't shoot here. Try again: ");
-                        tryAgain = true;
-                        
+                        tryAgain = true;  
                     }
                     else
                     {
                         Console.Clear();
                         Console.WriteLine($"{player1Name}, you shot Criminal " + criminalsHiddenBoard[shotOfficers - 1] + "!\n");
                         criminalsHiddenBoard[shotOfficers - 1] = "y";
-                        criminalsBoard[shotOfficers - 1] = "\x1B[32m X\x1B[0m"; // green text
+                        criminalsBoard[shotOfficers - 1] = "\x1B[32m X\x1B[0m";
                         PublicBoard.PrintPublicBoard(criminalsBoard);
                         counterOfficers++;
                         if (counterOfficers == 5)
@@ -115,14 +112,12 @@ namespace Officers_Criminals_Game
                         Console.WriteLine();
                         Console.Write("\nShoot again: ");
                         tryAgain = true;
-                        
                     }
                 }
                 catch
                 {
                     Console.Write("There is no such square. Try again: ");
                     tryAgain = true;
-                    
                 }
             }
 
@@ -149,7 +144,6 @@ namespace Officers_Criminals_Game
                         Console.WriteLine();
                         Console.Write("\nPress ENTER to continue. ");
                         Console.ReadLine();
-
                         goto TakeShotOfficers;
                     }
 
@@ -157,7 +151,6 @@ namespace Officers_Criminals_Game
                     {
                         Console.Write("You can't shoot here. Try again:  ");
                         tryAgainCrim = true;
-
                     }
                     else
                     {
@@ -176,19 +169,16 @@ namespace Officers_Criminals_Game
                         Console.WriteLine();
                         Console.Write("\nShoot again: ");
                         tryAgainCrim = true;
-
                     }
                 }
                 catch
                 {
                     Console.Write("There is no such square. Try again: ");
                     tryAgainCrim = true;
-
                 }
             }
 
         TheEnd:
-
             Console.WriteLine("\n\u001b[91m>>>\u001b[0m \x1b[96mTHANK YOU FOR THE GAME!\u001b[0m \u001b[91m<<<\u001b[0m");
         }
     }

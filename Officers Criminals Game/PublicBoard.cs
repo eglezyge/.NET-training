@@ -8,7 +8,6 @@ namespace Officers_Criminals_Game
 {
     public class PublicBoard
     {
-        //Create public board:
         public static string[] CreatePublicBoard()
         {
             string[] board = new string[16];
